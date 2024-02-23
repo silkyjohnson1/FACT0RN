@@ -1,6 +1,6 @@
 #  <div align="center">  FACT0RN  </div>
 
-A blockchain replacing hashing as Proof of Work (PoW) by integer factorization. A fork from bitcoin V22.0. The proof-of-work component has been replaced by Integer Factorization but everything else remains intact including the cli tool and all the RPC calls.
+A Proof of Work (PoW) blockchain replacing hashing with integer factorization. A fork from bitcoin V22.0. The POW component has been replaced by integer factorization but everything else remains intact including the cli tool and all the RPC calls.
 
 The FACT0RN blockchain seeks to allow its user to pay FACT coins to place integers in a deadpool for factorization. 
 
@@ -11,7 +11,7 @@ Coinbase: https://blog.coinbase.com/fact0rn-blockchain-integer-factorization-as-
 Contact:
 
 E-mail: fact0rn@pm.me <br>
-Discord: [https://discord.gg/tE2BNpgmtH](https://discord.gg/tE2BNpgmtH) <br>
+Discord: [https://discord.gg/tE2BNpgmtH](https://discord.gg/97BRNvJXst) <br>
 Twitter: [https://twitter.com/FACT0RN](https://twitter.com/FACT0RN) <br>
 Reddit: https://www.reddit.com/r/FACT0RN/ <br>
 
@@ -19,10 +19,11 @@ Listed on the following exchanges:
 1. https://xeggex.com/asset/fact <br>
 2. https://txbit.io/asset/fact <br>
 3. https://dex-trade.com/spot/trading/factusdt <br>
+4. https://www.mexc.com/exchange/FACT_USDT <br>
 
 ## Coin Distribution
 
-The FACT0RN blockchain had no pre-sale, pre-allocation, pre-mining, pre-distribution, or any mechanism to distribute or sell coins in any way prior to launch. The only way to get FACT coins is to mine them yourself. This has been true from the beginning and will continue to be true until FACT0RN is listed on an exchange. (Okay, now that we have been listed you can buy them.)
+The FACT0RN blockchain had no pre-sale, pre-allocation, pre-mining, pre-distribution, or any mechanism to distribute or sell coins in any way prior to launch. The only way to get FACT coins is to mine them yourself. This has been true from the beginning and will continue to be true until FACT0RN is listed on an exchange (okay, now that we have been listed, you can buy them).
 
 ## Installation
 
@@ -70,7 +71,7 @@ There are two ways to do this; set them in your config file or pass them in usin
 ### Method 1: config file
 
 The advantage of this method is that you don't have to enter it anywhere. You can run your node and use
-the cli tools wihtout passing in the rpcuser and rpcpassword flags all the time. 
+the cli tools without passing in the rpcuser and rpcpassword flags all the time. 
 
 Create the file ``~/.factorn/factorn.conf`` if it does not exist. Add the following to it:
 
@@ -96,7 +97,7 @@ To run testnet do:
 ```
 ./factornd -rpcuser=<set your username here> -rpcpassword=<set your password here> -testnet
 ```
-You will need to know this ro run FACTOR.py from the mining code at ``https://github.com/FACT0RN/factoring``.
+You will need to know this to run FACTOR.py from the mining code at ``https://github.com/FACT0RN/factoring``.
  
 
 ## Mining
@@ -105,14 +106,14 @@ We have created a python script to mine. Here's what you will need to mine:
 
 1. Wallet
 2. Python 3
-3. Put it all togehter
+3. Put it all together
 
 First, we need a node running. See the installation section. Once you have your
 node running here's how to create a wallet, generate an address and extract the 
 scriptPubKey value that will allow you to earn mining rewards.
 
 
-From the projects root folder:
+From the project's root folder:
 
 ```
 src/factorn-wallet  -wallet=<wallet name>  -descriptors create
@@ -121,7 +122,7 @@ src/factorn-cli    getnewaddress
 src/factorn-cli    getaddressinfo <address from previous command>
 ```
 
-For example, from the get ``getaddresinfo`` command above you should get something
+For example, from the get ``getaddressinfo`` command above you should get something
 similar to:
 
 ```
